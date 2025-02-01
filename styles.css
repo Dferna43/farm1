@@ -19,7 +19,7 @@ White: #ffffff
 */
 
 /*-------------------- IMPORTED FONT --------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 
 /*-------------------- CSS REST -------------------------------*/
 * {
@@ -36,8 +36,29 @@ html {
 /*------------ GLOBAL STYLES ( mobile first/small) ------------*/
 body {
     min-width: 428px;
-    font-family: 'Habibi', sans-serif;
-    margin: 0 20px;
+    font-family: 'Habibi', serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+header p {
+    color: #ffffff;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
 }
 
 header, footer {
@@ -46,19 +67,26 @@ header, footer {
 }
 
 nav ul {
-    display: flex-grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 40px;
 }
 
 nav li {
     list-style: none;
 }
 
+nav ul li {
+    width: 75%;
+    text-align: center;
+}
+
 nav a {
     text-decoration: none;
     background-color: #E75D02;
     display: block;
-    text-align: center;
     color: #ffffff;
     font-size: 1.5em;
     margin: 10px;
@@ -74,14 +102,20 @@ nav ul li:has(a[href="top"]) {
     display: none;
 }
 
-img {
-    width: 75%;
-}
-
-.img {
-    text-align: center;
+h1, h2, h3 {
+    font-family: 'Irish Grover', serif;
 }
 
 h1, h2, h3, p, img {
     padding: 10px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
