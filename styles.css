@@ -18,6 +18,11 @@ Black: #000000
 White: #ffffff
 */
 
+/* Small- min-width: 428px
+Medium- min-width: 834px
+Large- min-width: 1280px
+XL- min-width: 1440px */
+
 /*-------------------- IMPORTED FONT --------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 
@@ -61,16 +66,10 @@ header p {
     font-weight: bold;
 }
 
-header, footer {
-    width: 100%;
-    background-color: #06A816;
-}
-
 nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
     margin: 40px;
 }
 
@@ -102,6 +101,11 @@ nav ul li:has(a[href="top"]) {
     display: none;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 h1, h2, h3 {
     font-family: 'Irish Grover', serif;
 }
@@ -114,8 +118,67 @@ h2 {
     font-size: 2em;
 }
 
+.main {
+    background-color: #06A816;
+    color: #ffffff;
+    text-align: center;
+}
+
+.main_heading {
+    background-color: #06A816;
+}
+
 .img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.img div {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 145px;
+    left: 85px;
+    width: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 13px 50px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.copy {
+    color: #06A816;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*-------------------- MEDIA QUERY (medium) ----------------*/
+@media screen and (min-width: 834px) {
+    .main_heading {
+        display: flex;
+        justify-content: space-between;  
+        padding: 0 25px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin: 50px;
+    }
+
 }
